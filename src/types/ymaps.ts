@@ -1,1 +1,4 @@
-export type LngLat  = number[];
+export interface LngLat {
+  longitude: number;
+  latitude: number;
+}
