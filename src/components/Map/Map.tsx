@@ -4,33 +4,33 @@ import type { LngLat } from '../../types/ymaps.ts';
 import ymaps from 'yandex-maps';
 
 interface MapTestProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Начальныые координаты, по умолчанию Москва
+   * */
   center?: number[];
+  /**
+   * Начальный зум, по умолчанию 16
+   * */
   zoom?: number;
+  /**
+   * Точка А
+   * */
   startPoint?: LngLat;
+  /**
+   * Точка Б
+   * */
   endPoint?: LngLat;
+  /**
+   * Массив промежуточных точек
+   * */
   interPoints?: LngLat[];
 }
 
 const Map = ({
-  /**
-   * Начальныые координаты, по умолчанию Москва
-   * */
   center = [55.755864, 37.617698],
-  /**
-   * Начальный зум, по умолчанию 16
-   * */
   zoom = 16,
-  /**
-   * Точка А
-   * */
   startPoint,
-  /**
-   * Точка Б
-   * */
   endPoint,
-  /**
-   * Массив промежуточных точек
-   * */
   interPoints,
   className,
   ...props
